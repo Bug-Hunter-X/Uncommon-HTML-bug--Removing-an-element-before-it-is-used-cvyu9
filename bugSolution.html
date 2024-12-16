@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    //Correct way to select an element by ID after page load
+    window.addEventListener('load', function() {
+      const myDiv = document.getElementById("myDiv");
+      myDiv.remove();
+    });
+  </script>
+</body>
+</html>
